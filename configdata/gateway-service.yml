@@ -25,3 +25,19 @@ spring:
           uri: lb://loan-service
           predicates:
             - Path=/loans/**
+        - id: kardex-service
+          uri: lb://kardex-service
+          predicates:
+            - Path=/kardex/**
+        - id: rate-service
+          uri: lb://rate-service
+          predicates:
+            - Path=/rate/**
+        - id: report-service
+          uri: lb://report-service
+          predicates:
+            - Path=/report/**
+        - id: tools-service
+          uri: lb://tools-service
+          predicates:
+            - Path=/tools/**
