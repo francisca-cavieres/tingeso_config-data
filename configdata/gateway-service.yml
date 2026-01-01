@@ -14,7 +14,7 @@ spring:
   cloud:
     gateway:
       globalcors:
-        cors-configurations:
+        corsConfigurations:
           "[/**]":
             allowedOrigins: "*"
             allowedMethods: "*"
@@ -26,24 +26,24 @@ spring:
         - id: client-service
           uri: lb://client-service
           predicates:
-            - Path=/clients/**
+            - Path=/api/clients/**
         - id: loan-service
           uri: lb://loan-service
           predicates:
-            - Path=/loans/**
+            - Path=/api/loans/**
         - id: kardex-service
           uri: lb://kardex-service
           predicates:
-            - Path=/kardex/**
+            - Path=/api/kardex/**
         - id: rate-service
           uri: lb://rate-service
           predicates:
-            - Path=/rate/**
+            - Path=/api/rates/**
         - id: report-service
           uri: lb://report-service
           predicates:
-            - Path=/report/**
+            - Path=/api/report/**
         - id: tools-service
           uri: lb://tools-service
           predicates:
-            - Path=/tools/**
+            - Path=/api/tools/**,/api/general-tools/**
