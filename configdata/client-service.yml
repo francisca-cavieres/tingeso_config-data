@@ -1,11 +1,19 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${DB_HOST:client-db}:${DB_PORT:3306}/${DB_DBNAME:clientdb}?useSSL=false&serverTimezone=UTC
-    username: ${DB_USER:admin}
-    password: ${DB_PASSWORD:Admin_1234}
+    url: jdbc:mysql://client-db:3306/client_db?useSSL=false&serverTimezone=UTC
+    username: admin
+    password: Admin_1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
 eureka:
   client:
     fetch-registry: true
