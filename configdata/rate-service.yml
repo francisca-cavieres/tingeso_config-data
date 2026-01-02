@@ -3,9 +3,14 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${DB_HOST:rate-db}:${DB_PORT:3306}/${DB_DBNAME:ratedb}?useSSL=false&serverTimezone=UTC
-    username: ${DB_USER:admin}
-    password: ${DB_PASSWORD:Admin_1234}
+    url: jdbc:mysql://rate-db:3306/ratedb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: admin
+    password: Admin_1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
 eureka:
   client:
     fetch-registry: true
