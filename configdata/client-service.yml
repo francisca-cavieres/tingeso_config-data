@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://client-db:3306/client_db?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://client-db:3306/clientdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: admin
     password: Admin_1234
 
