@@ -30,7 +30,7 @@ spring:
         - id: loan-service
           uri: lb://loan-service
           predicates:
-            - Path=/api/loans/**
+            - Path=/api/loan/**
         - id: kardex-service
           uri: lb://kardex-service
           predicates:
