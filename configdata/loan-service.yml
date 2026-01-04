@@ -5,7 +5,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:9090/realms/toolrent
+          issuer-uri: http://keycloak:8080/realms/tingeso_backend
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://loan-db:3306/loandb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
