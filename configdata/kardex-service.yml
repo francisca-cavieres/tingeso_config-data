@@ -1,6 +1,11 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/realms/tingeso_backend
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://kardex-db:3306/kardexdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
