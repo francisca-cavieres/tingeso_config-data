@@ -1,6 +1,11 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:9090/realms/toolrent
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://loan-db:3306/loandb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
