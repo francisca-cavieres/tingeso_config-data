@@ -8,7 +8,7 @@ spring:
           issuer-uri: http://keycloak:8080/realms/tingeso_backend
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://loan-db-service:3306/loan-db-service?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://loan-db:3306/loandb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: admin
     password: Admin_1234
 
